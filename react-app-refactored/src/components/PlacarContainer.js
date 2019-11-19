@@ -49,8 +49,34 @@ export default class PlacarContainer extends React.Component {
             marcarGol={this.marcarGolVisitante.bind(this)}
           />
         </div>
+        <div>{this.props.clima}</div>
         <div style={{ clear: 'both' }}></div>
       </div>
     );
   }
 }
+
+PlacarContainer.propTypes = {
+  clima: React.PropTypes.string,
+  tempo: React.PropTypes.number.isRequired
+};
+
+PlacarContainer.defaultProps = {
+  clima: 'Ensolarado'
+};
+
+//React.PropTypes.any = espera qualquer valor
+//React.PropTypes.array
+//React.PropTypes.bool
+//React.PropTypes.func
+//React.PropTypes.number
+//React.PropTypes.object
+//React.PropTypes.string
+//React.PropTypes.instanceOf(Partida) = espera uma instância do obj Partida
+//React.PropTypes.oneOf(['Vasco', 'Flamengo']) = espera um desses dois apenas
+//React.PropTypes.oneOfType([Time, Partida]) = espera algo to objeto time Time ou Partida
+//React.PropTypes.arrayOf(React.PropTypes.number) = espera um array só de numbers
+//React.PropTypes.arrayOf(React.PropTypes.string) = espera um array só de strings
+//React.PropTypes.shape({
+//  nome: React.PropTypes.string  = espera um object desse formato, onde existe esse índice nome do tipo string
+//})
