@@ -17,7 +17,7 @@ function Movie() {
   };
 
   return (
-    <div>
+    <ul>
       {data.map(data => (
         <li key={data.episode_id}>
           <Link to={`/movie/${data.episode_id}`}>
@@ -25,7 +25,7 @@ function Movie() {
           </Link>
         </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
