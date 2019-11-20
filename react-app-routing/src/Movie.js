@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { Link } from 'react-router-dom';
 
-function Shop() {
+function Movie() {
   useEffect(() => {
     fetchData();
   }, []);
@@ -19,11 +20,13 @@ function Shop() {
     <div>
       {data.map(data => (
         <li key={data.episode_id}>
-          Episode {data.episode_id} - {data.title}
+          <Link to={`/movie/${data.episode_id}`}>
+            Episode {data.episode_id} - {data.title}
+          </Link>
         </li>
       ))}
     </div>
   );
 }
 
-export default Shop;
+export default Movie;

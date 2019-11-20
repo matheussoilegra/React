@@ -11,11 +11,14 @@ function Nav() {
     <nav className="nav">
       <h3>Logo</h3>
       <ul className="nav-links">
+        <Link to="/home" style={navStyle}>
+          <li>Home</li>
+        </Link>
+        <Link to="/movie" style={navStyle}>
+          <li>Movies</li>
+        </Link>
         <Link to="/about" style={navStyle}>
           <li>About</li>
-        </Link>
-        <Link to="/shop" style={navStyle}>
-          <li>Shop</li>
         </Link>
       </ul>
     </nav>
